@@ -1,47 +1,56 @@
 :root {
-  --brand-color-hero-footer: #2f303a;
-  --brand-color-accent: #2196f3;
-  --brand-color_3: #212121;
-  --brand-color_4: #e5e5e5;
-  --brand-color-text: #757575;
-  --brand-color_6: #ffffff;
-  --fone-svg-img: #f5f4fa;
-  --time-function: cubic-bezier(0.4, 0, 0.2, 1);
+	--brand-color-hero-footer: #2f303a;
+	--brand-color-accent: #2196f3;
+	--brand-color_3: #212121;
+	--brand-color_4: #e5e5e5;
+	--brand-color-text: #757575;
+	--brand-color_6: #ffffff;
+	--fone-svg-img: #f5f4fa;
+	--time-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @mixin font($fw, $fs, $lh, $ls) {
-  font-weight: $fw;
-  font-size: $fs;
-  line-height: $lh;
-  letter-spacing: $ls;
+	font-weight: $fw;
+	font-size: $fs;
+	line-height: $lh;
+	letter-spacing: $ls;
 }
 
 @mixin marginX-auto($r: auto, $l: auto) {
-  margin-left: $l;
-  margin-right: $r;
+	margin-left: $l;
+	margin-right: $r;
 }
 
 @mixin flexCentr($fl: flex, $ai: center, $jc: center) {
-  display: $fl;
-  align-items: $ai;
-  justify-content: $jc;
+	display: $fl;
+	align-items: $ai;
+	justify-content: $jc;
 }
 
 body {
-  font-family: 'roboto', 'sans-serif';
-  letter-spacing: 0.03em;
-  color: var(--brand-color_3);
+	font-family: "roboto", "sans-serif";
+	letter-spacing: 0.03em;
+	color: var(--brand-color_3);
 }
 
 .container {
-  width: 1200px;
-  padding: 0 15px;
-  margin-left: auto;
-  margin-right: auto;
+	max-width: 480px;
+	width: 100%;
+	padding: 0 15px;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media screen and (min-width: 768px) {
+		max-width: 768px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		max-width: 1200px;
+	}
 }
 
 .section {
-  padding: 94px 0;
+	padding: 94px 0;
 }
 
 // Сброс стилей
@@ -54,30 +63,34 @@ h5,
 h6,
 ul,
 p {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 ul {
-  list-style: none;
+	list-style: none;
 }
 
 /* Скрытые элементы */
 
 .qualities__title,
 .gallery__title {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.no-scroll {
+	overflow: hidden;
 }
