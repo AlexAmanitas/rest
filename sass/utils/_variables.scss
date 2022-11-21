@@ -1,96 +1,37 @@
-:root {
-	--brand-color-hero-footer: #2f303a;
-	--brand-color-accent: #2196f3;
-	--brand-color_3: #212121;
-	--brand-color_4: #e5e5e5;
-	--brand-color-text: #757575;
-	--brand-color_6: #ffffff;
-	--fone-svg-img: #f5f4fa;
-	--time-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+// Fonts
 
-@mixin font($fw, $fs, $lh, $ls) {
-	font-weight: $fw;
-	font-size: $fs;
-	line-height: $lh;
-	letter-spacing: $ls;
-}
+$titleFont: 'Titan One', cursive;
+$mainFont: 'DM Sans', sans-serif;
 
-@mixin marginX-auto($r: auto, $l: auto) {
-	margin-left: $l;
-	margin-right: $r;
-}
+// Colors
 
-@mixin flexCentr($fl: flex, $ai: center, $jc: center) {
-	display: $fl;
-	align-items: $ai;
-	justify-content: $jc;
-}
+$main-textColor: #ffffff;
+$secondary-textColor: #000000;
+$description-textColor: #907e82;
 
-body {
-	font-family: "roboto", "sans-serif";
-	letter-spacing: 0.03em;
-	color: var(--brand-color_3);
-}
+$main-titleColor: #d41443;
+$secondary-titleColor: #ffa5ba;
 
-.container {
-	max-width: 480px;
-	width: 100%;
-	padding: 0 15px;
-	margin-left: auto;
-	margin-right: auto;
+$contacts-bgCafe: #f0d1a5;
+$contacts-bgFood: #c2e297;
+$contacts-textColor: #907e82;
+$contacts-textHover: #d41443;
 
-	@media screen and (min-width: 768px) {
-		max-width: 768px;
-	}
+$mainButton-textColor: #d41443;
+$mainButton-bgColor: #ffffff;
+$mainButton-hoverColor: #ecebeb;
 
-	@media screen and (min-width: 1200px) {
-		max-width: 1200px;
-	}
-}
+$secondaryButton-textColor: #ffffff;
+$secondaryButton-bgColor: #d41342;
+$secondaryButton-hoverColor: #d41340;
 
-.section {
-	padding: 94px 0;
-}
+$mainIcon-bgColor: #fea5bb;
+$secondaryContainer-bgColor: #fff5f6;
 
-// Сброс стилей
+$main-bgColor: #ffffff;
+$about-advantagesBG: #fff5f6;
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-p {
-	margin: 0;
-	padding: 0;
-}
+$closeLocation-color: #d41340;
+$locationModal-bgColor: #fff5f6;
 
-a {
-	text-decoration: none;
-}
-
-ul {
-	list-style: none;
-}
-
-/* Скрытые элементы */
-
-.qualities__title,
-.gallery__title {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-	white-space: nowrap;
-	clip-path: inset(100%);
-	clip: rect(0 0 0 0);
-	overflow: hidden;
-}
-
-.no-scroll {
-	overflow: hidden;
-}
+$borderColor: #e1e1e1;
